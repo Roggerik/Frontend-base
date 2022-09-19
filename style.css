@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    --linear2:linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+    /*
+    - Linear, 135deg, from hsl(0, 0%, 100%), hsl(0, 100%, 98%)
+    - Linear, 135deg, from hsl(0, 80%, 86%), hsl(0, 74%, 74%)
+*/
+}
+
+body{
+    max-width: 1440px;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    margin: auto;
+    display: grid;
+    place-content: center;
+}
+
+.container{
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.container-text{
+width: 60%;
+height: 100%;
+position: relative;
+}
+
+.container-text::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url('images/bg-pattern-desktop.svg');
+    background-size:contain;
+    z-index: -1;
+}
+
+.logo{
+    width: 130px;
+    margin-top: 45px;
+    margin-left: 120px;
+}
+
+.container-text h1{
+    width: 250px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--Desaturated-Red);
+    margin-top: 80px;
+    margin-left: 120px;
+    letter-spacing: 10px;
+    line-height: 60px;
+}
+
+.container-text h1 span{
+    color: var(--Dark-Grayish-Red);
+    font-weight: 600;
+}
+
+.container-text p{
+    width: 380px;
+    margin-top: 30px;
+    margin-left: 120px;
+    color: var(--Desaturated-Red);
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.buttons{
+    width: 400px;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 120px;
+    position: relative;
+}
+
+.small-error{
+    position: absolute;
+    bottom: -22px;
+    left: 25px;
+    font-size: 12px;
+    color:var(--Soft-Red);
+    opacity: 0;
+    transition: .2s;
+}
+
+.small-ok{
+    position: absolute;
+    bottom: -22px;
+    left: 25px;
+    font-size: 12px;
+    color:blue;
+    opacity: 0;
+    transition: .2s;
+}
+
+.email{
+    width: 350px ;
+    height: 40px;
+    padding-left:20px;
+    border-radius: 30px;
+    border: 2px solid var(--Desaturated-Red);
+    outline: none;
+    position: relative;
+}
+
+.email::placeholder{
+    color:var(--Desaturated-Red)
+}
+
+.error{
+    position: absolute;
+    top: 8px;
+    right: 115px;
+    opacity: 0;
+    transition: .2s;
+}
+
+.button{
+    position: absolute;
+    right: 40px;
+    width: 70px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background: var(--linear2);
+    outline: none;
+    cursor: pointer;
+    box-shadow: 2px 3px 5px hsl(0, 74%, 74%);
+}
+
+.arrow{
+    width: 8px;
+}
+
+.container-image{
+    width: 40%;
+    height: 100%;
+    background: url('images/hero-desktop.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width:375px) and (max-width:1010px) {
+    body{
+        max-width: 375px;
+        width: 100%;
+        min-height: 750px;
+    }
+    .container{
+        width: 375px;
+        height: 650px;
+        flex-direction: column;
+        margin-top:100px;
+    }
+    
+    .container-text{
+    width: 100%;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    top: -70px;
+    width: 110px;
+    margin-top: 0px;
+    margin-left: 40px;
+}
+
+.container-text h1{
+        text-align: center;
+        width: 250px;
+        font-size: 30px;
+        margin: auto;
+        margin-top: 280px;
+        margin-bottom: 20px;
+        letter-spacing: 8px;
+        line-height: 40px;
+}
+
+.container-text p{
+    text-align: center;
+    width: 310px;
+    margin: auto;
+    font-size: 14px;
+}
+    
+    
+.buttons{
+    width: 360px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+
+.error{
+    right: 85px;
+}
+
+.button{
+    right: 9px;
+    height: 39px;
+}
+
+.arrow{
+    width: 8px;
+}
+.container-image{
+    position: absolute;
+    top: 100px;
+    width: 375px;
+    height: 250px;
+    background: url('images/hero-mobile.jpg');
+    background-position: center center;
+    background-size: cover;
+    }
+
+}
